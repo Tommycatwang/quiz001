@@ -24,28 +24,31 @@
 import csv
 
 # open the vendorlist file
-
+readlist=open('VendorList.csv','r')
 
 # create a csv object from the file object
-
+last=open('marketinglistFINAL.csv','w')
 
 # create an output file
-
+readin=csv.reader(readlist,delimiter=',')
+writein=csv.writer(last,delimiter=',')
 
 
 
 
 # create an empty dictionary
+person = {}
 
-
-
+next(readlist)
 # iterate through the csv object
+for name in readin:
+    print(name[1],name[2])
+    writein.write(name[1]+name[2]+','+name[4]+','+name[5])
 
-
-
-
+    fullname=(name[1]+name[2])
+    value=(name[4]+name[5])
     # add the key-value pair to the dictionary
-
+    person[value]= things{'email':name[4],'phone':name[5]}
 
 
 # print the dictionary after the loop is finished
@@ -57,4 +60,5 @@ import csv
 
 
 # close your output file
-
+readlist.close()
+last.close()
