@@ -48,7 +48,10 @@ for name in readin:
     fullname=(name[1]+name[2])
     value=(name[4]+name[5])
     # add the key-value pair to the dictionary
-    person[value]= things{'email':name[4],'phone':name[5]}
+    person[value]={}
+    person[value]['email'] = name[4]
+    person[value]['phone'] = name[5]
+    print(person)
 
 
 # print the dictionary after the loop is finished
